@@ -1,0 +1,116 @@
+:root{
+    --primaryColor: #003049 ;
+    --secondaryColor: #ffd6ff;
+    --lightPrimaryColor: #005e8f;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    background-image: linear-gradient(rgba(0, 0, 0, -1), rgba(0, 0, 0, 1)), url(../images/battle_field.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+nav{
+    background-color: var(--primaryColor);
+}
+
+
+section{
+    height: 100%;
+}
+
+.winner{
+    color: rgb(11, 255, 11);
+
+}
+
+.loser{
+    color: red;
+}
+
+.tie{
+    color: gray;
+}
+
+/* Make scrollbar thinner */
+#sideNav::-webkit-scrollbar {
+  width: 6px;
+}
+
+#sideNav::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+#sideNav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox scrollbar (optional) */
+#sideNav {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--lightPrimaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 2s ease; /* change from 0.5s to 2s */
+  overflow: hidden;
+}
+
+.loader svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+.loader svg circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+

@@ -1,0 +1,22 @@
+:root{
+    ---primaryColor: #003049 ;
+    ---secondaryColor: #ffd6ff;
+}
+
+body{
+    background-color: var(---primaryColor);
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins';
+}
+
+section{
+    height: 100vh;
+}
+
+.btn:hover{
+    background-color: var(---secondaryColor);
+    color: var(---primaryColor);
+    border-color: var(---primaryColor);
+}
